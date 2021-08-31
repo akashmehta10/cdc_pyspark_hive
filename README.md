@@ -8,6 +8,8 @@ Change Data Capture (CDC) using Pyspark and Hive provides a capability to determ
 | Inserted    | I         |
 | Deleted     | D         |
 
+Full Description: https://medium.com/@akashmehta10/change-data-capture-cdc-using-spark-hive-big-data-beca5afd669f
+
  **Snapshot Table**
   
 |eid|name      |address                 |phone_num |row_opern|rec_eff_dt|
