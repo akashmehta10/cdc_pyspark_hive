@@ -37,7 +37,7 @@ def get_hash_column(dataframe: DataFrame, keys_list: List, ignored_columns: List
     Returns:
         DataFrame: Dataframe with added column "hash"
     """
-    cols = list(set(dataframe.columns) - set(keys_list) - set(SCD_COLS) - set(ignored_columns))
+    cols = sorted(list(set(dataframe.columns) - set(keys_list) - set(SCD_COLS) - set(ignored_columns)))
     columns = [col(column) for column in cols]
     if columns:
         return dataframe.withColumn("hash", md5(concat_ws("|", *columns)))
